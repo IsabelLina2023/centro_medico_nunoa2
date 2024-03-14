@@ -53,7 +53,8 @@ function imprimirContenidos(array) {
 }
 // Llamar a la función para imprimir los contenidos del array de objetos
 imprimirContenidos(traumatologia)
-document.write(`<h3>Cantidad de atenciones para Traumatología: ${traumatologia.length}</h3><br>`)
+document.write(`<h3>Cantidad de atenciones para Traumatología: ${traumatologia.length}</h3>`)
+document.write(`<p>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length -1].paciente} - ${traumatologia[traumatologia.length -1].prevision}.</p><br>`)
 
 //Paso 2 del ejercicio
 radiologia.pop()
@@ -67,14 +68,16 @@ function imprimirContenidos(array) {
 }
 // Llamar a la función para imprimir los contenidos del array de objetos
 imprimirContenidos(radiologia)
-document.write(`<h3>Cantidad de atenciones para Radiología: ${radiologia.length}</h3><br>`)
+document.write(`<h3>Cantidad de atenciones para Radiología: ${radiologia.length}</h3>`)
+document.write(`<p>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length -1].paciente} - ${radiologia[radiologia.length -1].prevision}.</p><br>`)
 
 //Paso 3 del ejercicio
 document.write('<h2>Lista completa de pacientes de Dental:</h2>')
 for(let consulta of dental){
   document.write(`<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`); 
 }
-document.write(`<h3>Cantidad de atenciones para Dental: ${dental.length}</h3><br>`)
+document.write(`<h3>Cantidad de atenciones para Dental: ${dental.length}</h3>`)
+document.write(`<p>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length -1].paciente} - ${dental[dental.length -1].prevision}.</p><br>`)
 
 //Paso 4 del ejercicio
 document.write('<h2>Lista total de todos los pacientes que se atendieron en el centro médico:</h2>')
@@ -103,10 +106,6 @@ for(let consulta of traumatologia){
 document.write(`<div>${consulta.paciente} - ${consulta.prevision}</div>`)
     }
 }
-
-document.write(`<p>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length -1].paciente} - ${radiologia[radiologia.length -1].prevision}.</p>`);
-document.write(`<p>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length -1].paciente} - ${traumatologia[traumatologia.length -1].prevision}.</p>`);
-document.write(`<p>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length -1].paciente} - ${dental[dental.length -1].prevision}.</p>`);
 
 </script>
 <body>
